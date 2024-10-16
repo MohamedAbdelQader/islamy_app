@@ -9,7 +9,6 @@ class HadethChapter extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: Text("$content "
-
         ,
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
