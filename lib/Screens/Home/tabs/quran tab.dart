@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/Screens/Home/widgets/suraName%20widget.dart';
+import 'package:islamy_app/style/app_style.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> suraNames = [
@@ -252,14 +253,14 @@ class QuranTab extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                 fontSize: 20,
-
+                  color: AppStyle.isDark?Colors.white:Colors.black,
               ),),
             ),
             Container(
               height: 30,
               width: 3,
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary
+                color: AppStyle.isDark?Color(0xFFFACC1D):Theme.of(context).primaryColor
               ),
 
             ),
@@ -267,7 +268,9 @@ class QuranTab extends StatelessWidget {
               child: Text("Verses Number",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                fontSize: 20,)
+                fontSize: 20,
+                    color: AppStyle.isDark?Colors.white:Colors.black,
+                  )
               ),
             )
           ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islamy_app/Screens/ahadeth%20details/models/ahadeth.dart';
 import 'package:islamy_app/Screens/ahadeth%20details/widgets/hadeth%20chapter.dart';
 
+import '../../style/app_style.dart';
+
 class AhadethDetailsScreen extends StatelessWidget {
 static const routeName ="Ahadeth screen";
   @override
@@ -11,7 +13,7 @@ static const routeName ="Ahadeth screen";
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/background.png"),
+          image: AssetImage(AppStyle.isDark?"assets/images/bgDark.png":"assets/images/background.png"),
           fit: BoxFit.fill,
         ),
       ),

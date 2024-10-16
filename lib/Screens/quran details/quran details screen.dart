@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy_app/Screens/quran%20details/widgets/QuranChapter.dart';
+import 'package:islamy_app/style/app_style.dart';
 
 class QuranArgs {
   String Name;
@@ -29,7 +30,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background.png"),
+            image: AssetImage(AppStyle.isDark?"assets/images/bgDark.png":"assets/images/background.png"),
             fit: BoxFit.fill,
           ),
         ),
