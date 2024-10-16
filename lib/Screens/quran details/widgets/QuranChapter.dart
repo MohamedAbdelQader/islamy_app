@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/style/app_style.dart';
 
 class Quranchapter extends StatelessWidget {
   String chapter;
@@ -14,8 +15,10 @@ class Quranchapter extends StatelessWidget {
       textAlign: TextAlign.center,
       style:
       TextStyle(
-        color: Colors.black,
+        color: AppStyle.isDark?Color(0xFFFACC1D):Colors.black,
         fontSize: 20,
+
+
       ),);
   }
 }

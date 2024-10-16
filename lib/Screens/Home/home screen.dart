@@ -4,6 +4,8 @@ import 'package:islamy_app/Screens/Home/tabs/athkartab.dart';
 import 'package:islamy_app/Screens/Home/tabs/quran%20tab.dart';
 import 'package:islamy_app/Screens/Home/tabs/radio%20tab.dart';
 import 'package:islamy_app/Screens/Home/tabs/sebha%20tab.dart';
+import 'package:islamy_app/Screens/Home/tabs/settings/settings_tab.dart';
+import 'package:islamy_app/style/app_style.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "home";
@@ -16,15 +18,15 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranTab(),
     AhadesTab(),
     SebhaTab(),
-    Athkartab(),
     RadioTab(),
+    SettingsTab()
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/images/background.png"),
+        image: AssetImage(AppStyle.isDark?"assets/images/bgDark.png":"assets/images/background.png"),
         fit: BoxFit.fill,
       )),
       child: Scaffold(
@@ -67,18 +69,16 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor: Theme.of(context).colorScheme.primary,
 
               icon: ImageIcon(
-                AssetImage("assets/images/sebha.png"),
-              ),
-              label: "Athkar",
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-
-              icon: ImageIcon(
                 AssetImage("assets/images/radio.png"),
               ),
               label: "Radio",
             ),
+            BottomNavigationBarItem(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              icon: Icon(Icons.settings),
+              label: "Settings",
+            ),
+
           ],
         ),
         body: tabs[selectedIndex],

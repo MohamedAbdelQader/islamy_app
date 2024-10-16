@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../style/app_style.dart';
+
 class HadethChapter extends StatelessWidget {
   String content;
   HadethChapter({required this.content});
@@ -14,8 +16,9 @@ class HadethChapter extends StatelessWidget {
         textAlign: TextAlign.center,
         style:
         TextStyle(
-          color: Colors.black,
+          color: AppStyle.isDark?Color(0xFFFACC1D):Colors.black,
           fontSize: 25,
+
         ),),
     );
   }

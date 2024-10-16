@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy_app/Screens/ahadeth%20details/ahadeth%20details%20screen.dart';
 import 'package:islamy_app/Screens/ahadeth%20details/models/ahadeth.dart';
+import 'package:islamy_app/style/app_style.dart';
 
 class AhadesTab extends StatefulWidget {
   @override
@@ -28,7 +29,8 @@ class _AhadesTabState extends State<AhadesTab> {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 25,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
+            color: AppStyle.isDark?Colors.white:Colors.black
 
           ),),
         Divider(
@@ -57,6 +59,7 @@ class _AhadesTabState extends State<AhadesTab> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 24,
+                          color:  AppStyle.isDark?Colors.white:Colors.black,
                         ),),
                     ),
                   ],
